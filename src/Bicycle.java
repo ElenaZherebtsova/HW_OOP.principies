@@ -1,22 +1,17 @@
-public class Bicycle {
+public class Bicycle extends Transport {
 
-    private String modelName;
-    private int wheelsCount;
 
     public Bicycle(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
+        super(modelName, wheelsCount);
     }
 
-    public String toString () {
-        return "Велосипед " + modelName + ", диаметр колеса = " + wheelsCount + " дюймов.";
+    @Override
+    public String toString() {
+        return "Велосипед:" + super.toString();
     }
-
 
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
-
         System.out.println("1. Перевернуть веловипед вверх колесами.");
         System.out.println("2. Открутить болты и снять колесо.");
         System.out.println("3. Снять покрышку с колеса, заменить на новую.");
