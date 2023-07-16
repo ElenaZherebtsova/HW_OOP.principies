@@ -1,4 +1,4 @@
-public class Truck extends Transport{
+public class Truck extends MotorTransport {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -9,9 +9,13 @@ public class Truck extends Transport{
         return "Грузовик:" + super.toString();
     }
 
-    public void checkTrailer () {
+    public void checkTrailer() {
         System.out.println("Проверка трейлера.");
     }
 
+    public void service() {
+        super.service();
+        checkTrailer();
+    }
 
 }

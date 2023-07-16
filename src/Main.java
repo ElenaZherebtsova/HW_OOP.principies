@@ -4,26 +4,14 @@ public class Main {
         Bicycle stern = new Bicycle("Stern", 2);
         Car audi = new Car("Ауди", 4);
         Truck scania = new Truck("Scania", 6);
-//        System.out.println(stern);
-//        stern.updateTyre();
-//        System.out.println();
-
-//        System.out.println(audi);
-//        audi.updateTyre();
-//        System.out.println();
-//        audi.checkEngine();
-
-//        System.out.println();
-//        System.out.println(scania);
-
 
         ServiceStation station = new ServiceStation();
         System.out.println();
-       station.check(audi, null, null);
+        station.check(audi);
         System.out.println();
-        station.check(null, stern, null);
+        station.check(stern);
         System.out.println();
-        station.check(null, null, scania);
+        station.check(scania);
 
     }
 }

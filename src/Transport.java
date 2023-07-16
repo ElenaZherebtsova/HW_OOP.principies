@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
 
     private String modelName;
     private int wheelsCount;
@@ -25,8 +25,13 @@ public class Transport {
 
     }
 
-    public void checkEngine() {
-        System.out.println("Проверка двигателя.");
+    public void service() {
+        for (int i = 1; i < this.getWheelsCount() + 1; i++) {
+            System.out.println("Меняем колесо № " + i + ":");
+            this.updateTyre();
+        }
 
     }
+
+
 }
